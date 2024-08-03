@@ -16,11 +16,13 @@ const YesNoPage: FC = () => {
 
   return (
     <Dialog>
-      <div className="p-4 text-left flex-center">{yesNo?.yesno}</div>
+      <div className="m-3 flex max-w-[1000px] flex-col items-start justify-normal gap-y-3 rounded-md p-4 shadow-md">
+        <div className="text-left">{yesNo?.yesno}</div>
 
-      <DialogTrigger>
-        <Button className="ml-4">Дізнатися вирішення</Button>
-      </DialogTrigger>
+        <DialogTrigger>
+          <Button>Дізнатися вирішення</Button>
+        </DialogTrigger>
+      </div>
 
       <DialogContent className="p-4 flex-center">{yesNo?.solution}</DialogContent>
     </Dialog>

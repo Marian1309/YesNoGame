@@ -8,18 +8,19 @@ import { Button } from '@/components/ui/button';
 
 const RootPage: FC = () => {
   return (
-    <div className="m-3 rounded-md p-2 text-center shadow-md sm:text-xl">
+    <div className="m-3 text-center text-lg flex-center sm:text-xl">
       {YES_NO.map((yes) => (
-        <div className="flex flex-col items-end gap-y-2 py-1" key={yes.id}>
+        <div
+          className="flex max-w-[840px] flex-col items-baseline gap-y-2 rounded-md p-3 text-left shadow-md"
+          key={yes.id}
+        >
           <div className="cursor-pointer" key={yes.id}>
             {yes.yesno.slice(0, 80)}...
           </div>
 
-          <div className="">
-            <Link href={`/stories/${yes.id}`}>
-              <Button>Перейти</Button>
-            </Link>
-          </div>
+          <Link href={`/stories/${yes.id}`}>
+            <Button>Перейти</Button>
+          </Link>
         </div>
       ))}
     </div>
