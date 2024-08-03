@@ -1,0 +1,26 @@
+# dependencies
+node_modules
+
+# Ignore files for PNPM, NPM, YARN and BUN
+pnpm-lock.yaml
+yarn.lock
+.pnpm-lock.yaml
+bun.lockb
+
+# next.js
+.next
+
+# production
+build
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+next-env.d.ts
+
+# commit validation
+.husky/_
