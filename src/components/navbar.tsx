@@ -10,14 +10,14 @@ import { frizon } from '@/assets/fonts';
 
 const Navbar: FC = () => {
   return (
-    <div className="flex items-center justify-between bg-[#ed5966] p-4">
+    <div className="flex items-center justify-between bg-[#ed5966] p-4 text-sm sm:text-lg">
       <Link className={cn(frizon.className, 'flex items-center text-white')} href="/">
         <Puzzle color="#fff" />
 
         <p className="pl-3">YesNoGame</p>
       </Link>
 
-      <p className="text-xl text-white">Правила</p>
+      <p className="text-lg text-white sm:text-xl">Правила</p>
     </div>
   );
 };
