@@ -1,13 +1,14 @@
 import type { FC, ReactNode } from 'react';
 
 import type { Metadata } from 'next';
-import { Figtree } from 'next/font/google';
 
 import { cn } from '@/lib/utils';
 
-import './globals.scss';
+import Navbar from '@/components/navbar';
 
-const figtree = Figtree({ subsets: ['latin'], weight: ['400'] });
+import { roboto } from '@/assets/fonts';
+
+import './globals.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextjs.marian1309.vercel.app'),
@@ -25,7 +26,10 @@ type Props = {
 const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('min-h-screen', figtree.className)}>{children}</body>
+      <body className={cn('min-h-screen', roboto.className)}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 };
