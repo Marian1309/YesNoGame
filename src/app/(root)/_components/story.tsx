@@ -17,18 +17,18 @@ const YesNo: FC<Props> = ({ story }) => {
       <div className="cursor-pointer">{story.question.slice(0, 80)}...</div>
 
       <div className="flex items-center justify-between">
-        <Link href={`/stories/${story.id}`}>
-          <Button>Перейти</Button>
-        </Link>
-
         <Image
           alt="story"
-          height={50}
+          height={60}
           priority
           quality={100}
           src={`/${story?.imageUrl}`}
-          width={50}
+          width={60}
         />
+
+        <Link href={`/stories/${story.id}`}>
+          <Button>Перейти</Button>
+        </Link>
       </div>
     </div>
   );

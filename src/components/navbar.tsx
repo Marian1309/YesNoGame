@@ -17,7 +17,9 @@ const Navbar: FC = () => {
         <p className="pl-3">YesNoGame</p>
       </Link>
 
-      <p className="text-lg text-white sm:text-xl">Правила</p>
+      <Link className="text-lg text-white sm:text-xl" href="/rules">
+        Правила
+      </Link>
     </div>
   );
 };

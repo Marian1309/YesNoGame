@@ -5,6 +5,9 @@ import type { FC } from 'react';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 
+import Confetti from 'react-confetti';
+import useWindowSize from 'react-use/lib/useWindowSize';
+
 import STORIES from '@/lib/constants';
 
 import { Button } from '@/components/ui/button';
@@ -12,6 +15,7 @@ import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 const YesNoPage: FC = () => {
   const { id } = useParams();
+  const { width, height } = useWindowSize();
 
   const story = STORIES.find((story) => +story.id === +id);
 
@@ -28,16 +32,22 @@ const YesNoPage: FC = () => {
 
             <Image
               alt="story"
-              height={50}
+              height={60}
               priority
               quality={100}
               src={`/${story?.imageUrl}`}
-              width={50}
+              width={60}
             />
           </div>
         </div>
 
         <DialogContent className="max-w-[90%] p-8 flex-center">
+          <Confetti
+            className="absolute"
+            height={height}
+            numberOfPieces={100}
+            width={width}
+          />
           {story?.solution}
         </DialogContent>
       </Dialog>

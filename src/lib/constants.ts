@@ -1,4 +1,4 @@
-const YES_NO = [
+const STORIES = [
   {
     id: 1,
     question:
@@ -9,4 +9,4 @@ const YES_NO = [
   }
 ];
 
-export default YES_NO;
+export default STORIES;

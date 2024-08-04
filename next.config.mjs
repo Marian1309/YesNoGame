@@ -2,7 +2,10 @@
 
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true
+  swcMinify: true,
+  images: {
+    remotePatterns: [{ hostname: 'cdn-icons-png.flaticon.com' }]
+  }
 };
 
 export default nextConfig;
