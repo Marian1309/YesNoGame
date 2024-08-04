@@ -1,4 +1,6 @@
-import store from '@/context/store';
-
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export type Story = {
+  id: number;
+  question: string;
+  solution: string;
+  imageUrl: string;
+};

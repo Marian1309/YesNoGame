@@ -12,7 +12,7 @@ const Spinner: FC<Props> = ({ loading }) => {
   return (
     <ClipLoader
       aria-label="Loading Spinner"
-      color="#3b82f6"
+      color="#ed5966"
       cssOverride={{
         display: 'block',
         margin: '100px auto'
