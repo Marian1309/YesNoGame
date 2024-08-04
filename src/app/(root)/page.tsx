@@ -1,17 +1,17 @@
+'use client';
+
 import type { FC } from 'react';
 
 import STORIES from '@/lib/constants';
 
-import { Story } from './_components';
+import Stories from '@/components/stories';
 
 const RootPage: FC = () => {
-  return (
-    <div className="flex-col gap-4 p-4 text-center text-lg flex-center sm:flex-row sm:text-xl">
-      {STORIES.map((story) => (
-        <Story key={story.id} story={story} />
-      ))}
-    </div>
-  );
+  if (typeof window !== 'undefined' && !localStorage.getItem('stories')) {
+    localStorage.setItem('stories', JSON.stringify(STORIES));
+  }
+
+  return <Stories />;
 };
 
 export default RootPage;

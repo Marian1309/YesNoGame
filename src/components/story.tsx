@@ -11,10 +11,10 @@ type Props = {
   story: Story;
 };
 
-const YesNo: FC<Props> = ({ story }) => {
+const Story: FC<Props> = ({ story }) => {
   return (
     <div className="flex max-w-[840px] flex-col gap-y-2 rounded-md p-3 text-left shadow-md">
-      <div className="cursor-pointer">{story.question.slice(0, 80)}...</div>
+      <div className="cursor-pointer">{story.question?.slice(0, 80)}...</div>
 
       <div className="flex items-center justify-between">
         <Image
@@ -26,12 +26,14 @@ const YesNo: FC<Props> = ({ story }) => {
           width={60}
         />
 
-        <Link href={`/stories/${story.id}`}>
-          <Button>Перейти</Button>
-        </Link>
+        <div className="flex items-center gap-x-2">
+          <Link href={`/stories/${story.id}`}>
+            <Button>Перейти</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
 };
 
-export default YesNo;
+export default Story;
