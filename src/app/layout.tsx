@@ -2,6 +2,8 @@ import type { FC, ReactNode } from 'react';
 
 import type { Metadata } from 'next';
 
+import { Toaster } from 'react-hot-toast';
+
 import { cn } from '@/lib/utils';
 
 import Navbar from '@/components/navbar';
@@ -29,6 +31,7 @@ const RootLayout: FC<Props> = ({ children }) => {
       <body className={cn('min-h-screen', roboto.className)}>
         <Navbar />
         {children}
+        <Toaster />
       </body>
     </html>
   );

@@ -35,7 +35,7 @@ const YesNoPage: FC = () => {
               height={60}
               priority
               quality={100}
-              src={`/${story?.imageUrl}`}
+              src={`/${story?.id}.svg`}
               width={60}
             />
           </div>

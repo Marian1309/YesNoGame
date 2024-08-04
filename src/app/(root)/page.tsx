@@ -6,7 +6,7 @@ import { Story } from './_components';
 
 const RootPage: FC = () => {
   return (
-    <div className="m-3 text-center text-lg flex-center sm:text-xl">
+    <div className="flex-col gap-4 p-4 text-center text-lg flex-center sm:flex-row sm:text-xl">
       {STORIES.map((story) => (
         <Story key={story.id} story={story} />
       ))}
